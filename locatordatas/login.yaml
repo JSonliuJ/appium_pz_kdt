@@ -1,0 +1,21 @@
+user_pwd_login:
+  - by: xpath
+    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/home_title_not_login"]'
+    action: click
+  - by: xpath
+    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/login_account"]'
+    action: send
+    value: 账号
+  - by: xpath
+    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/login_password"]'
+    action: send
+    value: 密码
+  - by: xpath
+    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/login_submit"]'
+    action: click
+wx_login:
+  - by: xpath
+    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/home_title_not_login"]'
+    action: click
+  - by: xpath
+    locator: ''

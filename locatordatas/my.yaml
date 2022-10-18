@@ -1,0 +1,9 @@
+is_login_successful:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"user_info")]//*[@text="股神55531447"]'
+#    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/name_text_view"]'
+    action: get_text
+click_logout_button:
+  - by: xpath
+    locator: '//*[@resource-id="com.hundsun.winner.pazq:id/user_center_quit_button"]'
+    action: click

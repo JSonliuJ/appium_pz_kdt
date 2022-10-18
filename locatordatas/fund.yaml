@@ -1,0 +1,30 @@
+click_fund_button:
+  - by: xpath
+    # //*[contains(@resource-id,"home_top_view"]//*[@text="基金"]/../..
+    locator: '//android.widget.LinearLayout[contains(@resource-id,"home_item_layout_bg") and @index="1"]'
+    action: click
+click_customize_page_button:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"fixedWrap")]//*[@content-desc="自选"]'
+    action: click
+
+click_added_optional_fund_button:
+  - by: xpath
+    locator: '//*[@text="${property_name}"]../..'
+    action: click
+
+add_collect:
+  - by: xpath
+    locator: '//*[@resource-id="app"]//*[@text="自选"]/../..//android.view.View[contains(@index,"1")]'
+    action: click
+click_fixed_invest_button:
+  - by: ACCESSIBILITY_ID
+    locator: '//*[@content-desc="定投1折"]'
+    action: click
+#    - by: xpath
+#    locator: '//*[@resource-id="app"]//*[@text="定投"]/../..//android.view.View[contains(@index,3)]'
+
+click_purchase_button:
+  - by: ACCESSIBILITY_ID
+    locator: '//*[@content-desc="购买"]'
+    action: click

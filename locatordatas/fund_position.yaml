@@ -1,0 +1,76 @@
+goto_position_fund_manage:
+  - by: xpath
+    # locator: '//*[@resource-id="com.hundsun.winner.pazq:id/scroll_listview"]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]'
+    locator: '//*[contains(@resource-id,"myfund_name_text_view") and @text="${fund_name}"]/../..//android.widget.LinearLayout[1]'
+    action: click
+goto_redemption_or_conversion:
+  - by: xpath
+    locator: '//*[@content-desc="赎回/转换"]'
+    action: click
+
+goto_fixed_input:
+  - by: xpath
+    locator: '//*[@content-desc="定投"]'
+    action: click
+  -
+
+goto_continue_buy:
+  - by: xpath
+    locator: '//*[@content-desc="继续购买"]'
+    action: click
+  - by: xpath
+    locator: '//*[@resource-id="app"]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ListView[2]/android.view.View[2]/android.widget.TextView[2]'
+    action: click
+  - by: xpath
+    locator: '//*[@resource-id="app"]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.ListView[1]/android.view.View[2]' # 选择支付方式:余额
+    action: click
+  - by: xpath
+    locator: '//*[@resource-id="app"]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ListView[3]/android.view.View[1]/android.view.View[2]/android.view.View[1]' # 金额输入框
+    action: click
+  - by: xpath
+    locator: '//*[contains(@resource-id,"_secukeyboard")]/android.view.View[2]//*[@text="${buy_amount}"]'
+    action: click
+  - by: xpath
+    locator: '//android.widget.TextView[@text="完成"]'
+    action: click
+  - by: xpath
+    locator: '//*[@content-desc="支付"]'
+    action: click
+confirm_pay_and_input_pwd:
+  - by: xpath
+    locator: (521,1216)
+    action: tap
+  - by: xpath
+    locator: '//*[@resource-id="app"]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.TextView[1]'
+    action: click
+  - by: xpath
+    locator: (521,1216)
+    action: tap
+  - by: xpath
+    locator: (521,1216)
+    action: tap
+#  - by: xpath
+#    locator: '//*[@resource-id="stock-password"]/android.view.View[2]/android.widget.ListView[1]/android.view.View[1]/android.view.View[1]/android.widget.TextView[2]'
+#    action: click
+  - by: xpath
+    locator: (43,1000)
+    action: tap
+  - by: xpath
+    locator: '//*[contains(@resource-id,"_secukeyboard")]/android.view.View[2]//*[@text=""]'
+    action: secukey_input
+    value: 支付密码
+  - by: xpath
+    locator: '//android.view.View[@content-desc="确定"]'
+    action: click
+is_continue_buy_succeessful:
+#  - by: xpath
+#    locator: '//*[@content-desc="完成"]'
+#    action: get_text
+  - by: xpath
+    locator: '//*[@text="订单提交成功，交易确认中"]'
+    action: get_text
+click_complete_button:
+  - by: xpath
+    locator: '//*[@content-desc="完成"]'
+    action: click
+
