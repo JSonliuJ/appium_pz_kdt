@@ -1,0 +1,30 @@
+app1:
+  automationName: UiAutomator2
+  platformName: Android
+  platformVersion: 7.1.2
+  deviceName: emulator-5554
+  appPackage: com.hundsun.winner.pazq
+  appActivity: com.hundsun.winner.pazqapp.ui.home.activity.NewSplashActivity
+  noReset: True
+  skipServerInstallation: True
+  skipDeviceInitialization: True
+#  unicodeKeyboard: True
+#  resetKeyboard: True
+#  dontStopAppOnReset: Ture # 首次启动的时候，不停止app ，默认为false
+
+app2:
+  automationName: UiAutomator2
+  platformName: Android
+  platformVersion: 7.1.2
+  deviceName: emulator-5554
+  appPackage: com.tencent.mobileqq
+  appActivity: com.tencent.mobileqq.activity.SplashActivity
+  noReset: True
+
+main_tab_locator:
+  index: '//*[contains(@resource-id,"main_container_bottom_tab")]//*[@text="首页"]'
+  exchange: '//*[contains(@resource-id,"main_container_bottom_tab")]//*[@text="交易"]'
+  optional: '//*[contains(@resource-id,"main_container_bottom_tab")]//*[@text="自选"]'
+#  optional: '//*[@resource-id="com.hundsun.winner.pazq:id/main_container_bottom_tab"]/android.widget.RelativeLayout[3]'
+  financial_management: '//*[contains(@resource-id,"main_container_bottom_tab")]//*[@text="理财"]'
+  my: '//*[contains(@resource-id,"main_container_bottom_tab")]//*[@text="我的"]'
